@@ -1,1 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GlowMirror</title>
 
+<style>
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
+body{background:#f7f7f7;color:#111;line-height:1.6;}
+
+/* HEADER */
+header{
+    width:100%;
+    padding:25px 40px;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+header h1{
+    font-size:26px;
+    letter-spacing:1px;
+    font-weight:700;
+    color:#ff6ea6;
+}
+
+/* HERO */
+.hero{
+    width:100%;
+    height:80vh;
+    background:url('hero.jpg') center/cover no-repeat;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding-left:50px;
+}
+.hero h2{
+    font-size:48px;
+    max-width:450px;
+    font-weight:800;
+}
+.hero p{
+    margin-top:15px;
+    font-size:20px;
+    max-width:500px;
+}
+.hero button{
+    margin-top:30px;
+    padding:15px 35px;
+    font-size:20px;
+    border:none;
+    background:#ff6ea6;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+.hero button:hover{opacity:0.85;}
+
+/* PRODUCT SECTION */
+.section-title{
+    text-align:center;
+    font-size:38px;
+    margin:60px 0 20px;
+    color:#ff6ea6;
+    font-weight:700;
+}
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:40px;
+    padding:0 40px 60px;
+}
+.product{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 16px rgba(0,0,0,0.08);
+    text-align:center;
+    transition:.3s;
+}
+.product:hover{
+    transform:translateY(-5px);
+    box-shadow:0 4px 20px rgba(0,0,0,0.15);
+}
+.product img{
+    width:100%;
+    border-radius:10px;
+}
+.product h3{
+    margin:20px 0 10px;
+    font-size:24px;
+}
+.product p{
+    font-size:16px;
+    color:#444;
+}
+.price{
+    margin-top:10px;
+    font-size:20px;
+    font-weight:700;
+    color:#ff6ea6;
+}
+.buy-btn{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    background:#ff6ea6;
+    color:white;
+    font-size:18px;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+.buy-btn:hover{opacity:.85;}
+
+/* NEWSLETTER */
+.newsletter{
+    width:100%;
+    padding:50px 40px;
+    background:white;
+    margin-top:60px;
+    text-align:center;
+}
+.newsletter h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+.newsletter p{
+    font-size:16px;
+    margin-bottom:20px;
+}
+.newsletter input{
+    width:300px;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+.newsletter button{
+    padding:12px 25px;
+    background:#ff6ea6;
+    border:none;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+.newsletter button:hover{opacity:.85;}
+
+/* FOOTER */
+footer{
+    padding:30px;
+    text-align:center;
+    font-size:14px;
+    color:#555;
+}
+
+</style>
+
+<script>
+function buyNow(){
+    window.location.href="https://wa.me/"; // ADD YOUR WHATSAPP LINK
+}
+</script>
+
+</head>
+<body>
+
+<header>
+    <h1>GlowMirror</h1>
+</header>
+
+<section class="hero">
+    <h2>Glow Up Your Beauty Routine</h2>
+    <p>Bright, soft LED lighting with adjustable angles — perfect for makeup, skincare, and flawless selfies.</p>
+    <button onclick="buyNow()">Buy Now</button>
+</section>
+
+<h2 class="section-title">Our Product</h2>
+
+<section class="products">
+    <div class="product">
+        <img src="pic1.jpg">
+        <h3>GlowMirror Classic</h3>
+        <p>Premium soft lighting. Ultra-clear display. Wireless & rechargeable.</p>
+        <div class="price">$59.99</div>
+        <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+    </div>
+
+    <div class="product">
+        <img src="pic2.jpg">
+        <h3>GlowMirror Soft Pink</h3>
+        <p>Minimal design in soft pink. Portable, elegant, and ultra-bright.</p>
+        <div class="price">$59.99</div>
+        <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+    </div>
+
+    <div class="product">
+        <img src="pic3.jpg">
+        <h3>GlowMirror White Edition</h3>
+        <p>Crisp white finish. Perfect for clean and aesthetic setups.</p>
+        <div class="price">$59.99</div>
+        <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+    </div>
+</section>
+
+<section class="newsletter">
+    <h2>Join Our Glow Club</h2>
+    <p>Get discounts & updates when we drop new products.</p>
+    <form action="https://formspree.io/f/mwkayzkn" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button>Subscribe</button>
+    </form>
+</section>
+
+<footer>
+    © 2025 GlowMirror. All Rights Reserved.
+</footer>
+
+</body>
+</html>

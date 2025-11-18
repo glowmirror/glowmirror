@@ -13,25 +13,27 @@
     }
 
     :root {
-      --bg: #050608;
-      --bg-soft: #101118;
-      --accent: #ff6fb5;
-      --accent-soft: #ffb6da;
-      --text: #f9f9ff;
-      --muted: #a4a6b8;
-      --card: #141623;
-      --border: rgba(255, 255, 255, 0.08);
+      /* Rose-gold feminine palette */
+      --bg: #f7f0f3;
+      --bg-soft: #f0e2e7;
+      --accent: #d76c9a;
+      --accent-soft: #f2b2ce;
+      --text: #4a2837;
+      --muted: #8f647d;
+      --card: #ffffff;
+      --border: rgba(215, 108, 154, 0.25);
       --radius-lg: 18px;
       --radius-md: 12px;
       --radius-pill: 999px;
-      --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.7);
-      --shadow-glow: 0 0 40px rgba(255, 111, 181, 0.45);
+      --shadow-soft: 0 18px 45px rgba(188, 112, 150, 0.22);
+      --shadow-glow: 0 0 40px rgba(215, 108, 154, 0.35);
     }
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
         sans-serif;
-      background: radial-gradient(circle at top, #171828 0, #050608 55%);
+      background:
+        radial-gradient(circle at top, #ffe6f2 0, #f7f0f3 45%, #f4e5ee 100%);
       color: var(--text);
       line-height: 1.5;
     }
@@ -66,8 +68,8 @@
       backdrop-filter: blur(18px);
       background: linear-gradient(
         to bottom,
-        rgba(5, 6, 8, 0.95),
-        rgba(5, 6, 8, 0.75),
+        rgba(247, 240, 243, 0.95),
+        rgba(247, 240, 243, 0.85),
         transparent
       );
     }
@@ -82,8 +84,8 @@
       width: 26px;
       height: 26px;
       border-radius: 40%;
-      background: radial-gradient(circle at 30% 30%, #ffffff, #ffc4e0 35%, #ff6fb5 70%, #6d4bff 100%);
-      box-shadow: 0 0 20px rgba(255, 182, 218, 0.7);
+      background: radial-gradient(circle at 30% 30%, #ffffff, #ffd5ea 45%, #d76c9a 80%);
+      box-shadow: 0 0 16px rgba(215, 108, 154, 0.6);
       position: relative;
       overflow: hidden;
     }
@@ -93,7 +95,7 @@
       position: absolute;
       inset: 25%;
       border-radius: 40%;
-      border: 2px solid rgba(255, 255, 255, 0.55);
+      border: 2px solid rgba(255, 255, 255, 0.7);
     }
 
     .brand-text-main {
@@ -127,14 +129,15 @@
     }
 
     nav a:hover {
-      border-color: rgba(255, 255, 255, 0.2);
+      border-color: rgba(215, 108, 154, 0.4);
       color: var(--text);
+      background: rgba(255, 255, 255, 0.7);
     }
 
     .nav-pill {
-      border-color: rgba(255, 255, 255, 0.12);
+      border-color: rgba(215, 108, 154, 0.5);
       color: var(--text);
-      background: radial-gradient(circle at 20% 0%, #ff6fb5 0, #ff6fb5 2px, transparent 35%);
+      background: radial-gradient(circle at 20% 0%, #ffd5ea 0, #ffd5ea 2px, #ffe9f5 40%);
     }
 
     /* HERO */
@@ -151,27 +154,26 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 3px 9px;
+      padding: 4px 10px;
       border-radius: var(--radius-pill);
       font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: var(--muted);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(215, 108, 154, 0.4);
       background: linear-gradient(
         120deg,
-        rgba(255, 111, 181, 0.18),
-        rgba(109, 75, 255, 0.2),
-        rgba(16, 17, 24, 0.8)
+        rgba(244, 187, 214, 0.9),
+        rgba(255, 243, 248, 0.9)
       );
     }
 
     .hero-left-eyebrow-dot {
-      width: 6px;
-      height: 6px;
+      width: 7px;
+      height: 7px;
       border-radius: 999px;
-      background: #61ffba;
-      box-shadow: 0 0 10px rgba(97, 255, 186, 0.9);
+      background: #7ed0a3;
+      box-shadow: 0 0 10px rgba(126, 208, 163, 0.9);
     }
 
     .hero-title {
@@ -183,7 +185,7 @@
     }
 
     .hero-title span {
-      background: linear-gradient(120deg, #ffb6da, #ff6fb5, #ffffff);
+      background: linear-gradient(120deg, #d76c9a, #f6a8c9, #b45b86);
       -webkit-background-clip: text;
       color: transparent;
     }
@@ -207,17 +209,18 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 6px 10px;
+      padding: 6px 11px;
       border-radius: var(--radius-pill);
-      background: rgba(20, 22, 35, 0.9);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: #ffffff;
+      border: 1px solid rgba(215, 108, 154, 0.26);
+      box-shadow: 0 10px 25px rgba(176, 121, 148, 0.15);
     }
 
     .hero-meta-dot {
       width: 7px;
       height: 7px;
       border-radius: 50%;
-      background: #ff6fb5;
+      background: #d76c9a;
     }
 
     .hero-cta-row {
@@ -236,13 +239,10 @@
       font-size: 0.92rem;
       font-weight: 600;
       cursor: pointer;
-      background: radial-gradient(
-          circle at 10% 0,
-          rgba(255, 255, 255, 0.3),
-          transparent 45%
-        ),
-        linear-gradient(120deg, #ff6fb5, #ffb6da, #ff6fb5);
-      color: #120612;
+      background:
+        radial-gradient(circle at 10% 0, rgba(255, 255, 255, 0.9), transparent 55%),
+        linear-gradient(120deg, #d76c9a, #f6a8c9, #fbe0ee);
+      color: #4a1028;
       box-shadow: var(--shadow-glow);
       transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
     }
@@ -250,15 +250,15 @@
     .btn-primary:hover {
       transform: translateY(-1px);
       filter: brightness(1.03);
-      box-shadow: 0 0 50px rgba(255, 111, 181, 0.8);
+      box-shadow: 0 0 40px rgba(215, 108, 154, 0.6);
     }
 
     .btn-secondary {
       border-radius: var(--radius-pill);
       padding: 10px 18px;
       font-size: 0.9rem;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      background: rgba(14, 16, 24, 0.9);
+      border: 1px solid rgba(215, 108, 154, 0.35);
+      background: rgba(255, 255, 255, 0.9);
       color: var(--text);
       cursor: pointer;
       display: inline-flex;
@@ -268,7 +268,7 @@
     }
 
     .btn-secondary:hover {
-      background: rgba(29, 32, 48, 0.9);
+      background: #ffeaf5;
     }
 
     .btn-secondary span.arrow {
@@ -292,17 +292,17 @@
 
     .hero-price-main {
       font-size: 1.4rem;
-      font-weight: 600;
-      color: #ffffff;
+      font-weight: 700;
+      color: #3b1e2f;
     }
 
     .hero-price-badge {
       padding: 4px 10px;
       border-radius: var(--radius-pill);
-      background: rgba(61, 214, 140, 0.12);
-      color: #8affc5;
+      background: rgba(126, 208, 163, 0.12);
+      color: #3b7f57;
       font-size: 0.75rem;
-      border: 1px solid rgba(138, 255, 197, 0.45);
+      border: 1px solid rgba(111, 196, 147, 0.6);
     }
 
     /* HERO RIGHT */
@@ -312,13 +312,14 @@
     }
 
     .hero-card {
-      background: radial-gradient(circle at 0% 0%, #ff6fb5 0, #ff6fb5 2px, transparent 40%),
-        radial-gradient(circle at 100% 10%, #b48bff 0, #b48bff 2px, transparent 40%),
-        linear-gradient(160deg, #18192a, #050608 50%, #18192a);
+      background:
+        radial-gradient(circle at 0% 0%, #ffe1f0 0, #ffe1f0 12%, transparent 45%),
+        radial-gradient(circle at 100% 10%, #f4c6dd 0, #f4c6dd 10%, transparent 40%),
+        linear-gradient(160deg, #ffffff, #f7edf4 50%, #ffeef7);
       border-radius: 24px;
       padding: 16px 16px 18px;
       box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(215, 108, 154, 0.25);
       position: relative;
       overflow: hidden;
     }
@@ -334,7 +335,7 @@
       position: relative;
       border-radius: 20px;
       overflow: hidden;
-      background: radial-gradient(circle at 50% 0%, #ffb6da 0, #3b3c54 50%, #0d0e18 100%);
+      background: radial-gradient(circle at 50% 0%, #ffe0f1 0, #f2c7da 45%, #f7edf4 100%);
       padding: 10px;
     }
 
@@ -345,8 +346,8 @@
       border-radius: 18px;
       background: linear-gradient(
         to bottom,
-        rgba(255, 255, 255, 0.25),
-        transparent 80%
+        rgba(255, 255, 255, 0.6),
+        transparent 85%
       );
       pointer-events: none;
     }
@@ -365,8 +366,8 @@
 
     .hero-card-secondary-imgs img {
       border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: #101118;
+      border: 1px solid rgba(215, 108, 154, 0.25);
+      background: #ffffff;
     }
 
     .hero-card-floating {
@@ -384,19 +385,19 @@
     .hero-card-floating-pill {
       padding: 4px 10px;
       border-radius: var(--radius-pill);
-      background: rgba(5, 6, 8, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(215, 108, 154, 0.25);
       backdrop-filter: blur(12px);
     }
 
-    /* FEATURES SECTION */
+    /* SECTIONS */
 
     section {
       border-radius: 24px;
-      background: radial-gradient(circle at 0 0, #18192a 0, #050608 60%);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: #ffffff;
+      border: 1px solid rgba(215, 108, 154, 0.25);
       padding: 18px 16px 20px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 16px 40px rgba(195, 137, 164, 0.15);
     }
 
     section + section {
@@ -433,8 +434,8 @@
 
     .feature-card {
       border-radius: var(--radius-md);
-      background: rgba(10, 11, 18, 0.98);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: #fff7fb;
+      border: 1px solid rgba(215, 108, 154, 0.22);
       padding: 10px 10px 12px;
       display: flex;
       flex-direction: column;
@@ -445,7 +446,7 @@
       width: 22px;
       height: 22px;
       border-radius: 8px;
-      background: radial-gradient(circle at 30% 30%, #ffffff, #ffb6da 40%, #ff6fb5 80%);
+      background: radial-gradient(circle at 30% 30%, #ffffff, #ffd3ea 40%, #d76c9a 85%);
       margin-bottom: 4px;
     }
 
@@ -457,8 +458,6 @@
     .feature-text {
       color: var(--muted);
     }
-
-    /* DETAILS / WHAT'S INCLUDED */
 
     .details-layout {
       display: grid;
@@ -477,8 +476,8 @@
     .details-item {
       padding: 8px 10px;
       border-radius: var(--radius-md);
-      background: rgba(10, 11, 18, 0.98);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: #fff7fb;
+      border: 1px solid rgba(215, 108, 154, 0.22);
     }
 
     .details-label {
@@ -494,8 +493,8 @@
 
     .whats-included-card {
       border-radius: var(--radius-lg);
-      background: linear-gradient(145deg, #18192a, #080910);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: linear-gradient(145deg, #fff7fb, #ffe1f0);
+      border: 1px solid rgba(215, 108, 154, 0.3);
       padding: 10px 12px 12px;
     }
 
@@ -515,15 +514,13 @@
       gap: 6px;
       padding: 4px 8px;
       border-radius: var(--radius-pill);
-      background: rgba(61, 214, 140, 0.1);
-      color: #8affc5;
-      border: 1px solid rgba(61, 214, 140, 0.4);
+      background: rgba(215, 108, 154, 0.1);
+      color: #b14d7c;
+      border: 1px solid rgba(215, 108, 154, 0.5);
       font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
     }
-
-    /* FAQ */
 
     .faq-grid {
       display: grid;
@@ -535,8 +532,8 @@
     .faq-item {
       border-radius: var(--radius-md);
       padding: 8px 10px;
-      background: rgba(10, 11, 18, 0.98);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: #fff7fb;
+      border: 1px solid rgba(215, 108, 154, 0.22);
     }
 
     .faq-q {
@@ -547,8 +544,6 @@
     .faq-a {
       color: var(--muted);
     }
-
-    /* FOOTER */
 
     footer {
       padding: 16px 4px 4px;
@@ -567,10 +562,8 @@
 
     .footer-links a {
       text-decoration: underline;
-      text-decoration-color: rgba(255, 255, 255, 0.2);
+      text-decoration-color: rgba(215, 108, 154, 0.6);
     }
-
-    /* RESPONSIVE */
 
     @media (max-width: 880px) {
       .hero {
@@ -709,8 +702,6 @@
         <div class="hero-right">
           <div class="hero-card">
             <div class="hero-card-inner">
-
-              <!-- MAIN Image (FIXED PATH) -->
               <div class="hero-card-main-img-wrap">
                 <img
                   src="glowmirror-main.jpg"
@@ -718,8 +709,6 @@
                   class="hero-card-main-img"
                 />
               </div>
-
-              <!-- SECONDARY IMAGES (FIXED PATHS) -->
               <div class="hero-card-secondary-imgs">
                 <img
                   src="glowmirror-angle.jpg"
@@ -730,7 +719,6 @@
                   alt="Close up of GlowMirror soft LED lighting"
                 />
               </div>
-
             </div>
 
             <div class="hero-card-floating">
@@ -748,10 +736,10 @@
       <!-- FEATURES -->
       <section id="features">
         <div class="section-eyebrow">Why GlowMirror</div>
-        <div class="section-title">Better than your bathroom mirror</div>
+        <div class="section-title">Perfect for your vanity setup</div>
         <p class="section-subtitle">
-          A compact, bright and aesthetic mirror that makes your skin tone look real.
-          Perfect for daily routines or content creation.
+          Soft, flattering light that makes your skin look real, not orange or grey.
+          Ideal for daily routines, TikToks, Reels and mirror selfies.
         </p>
 
         <div class="feature-grid">
@@ -759,58 +747,56 @@
             <div class="feature-icon"></div>
             <div class="feature-title">Soft LED ring light</div>
             <div class="feature-text">
-              Even lighting with no harsh shadows. See your real skin tone while doing
-              makeup or skincare.
+              Even lighting with no harsh shadows. Your base, blush and contour look the same in real life and photos.
             </div>
           </div>
           <div class="feature-card">
             <div class="feature-icon"></div>
             <div class="feature-title">3 brightness levels</div>
             <div class="feature-text">
-              Tap to switch between low, medium and high brightness. Match any room or time of day.
+              Tap to switch between low, medium and high to match your room, day or night.
             </div>
           </div>
           <div class="feature-card">
             <div class="feature-icon"></div>
             <div class="feature-title">Rechargeable & wireless</div>
             <div class="feature-text">
-              Built-in battery with USB-C. Use it anywhere – desk, bedroom, dressing table, or on trips.
+              Built-in battery with USB-C. Use it on your desk, vanity or bed without being stuck to a plug.
             </div>
           </div>
           <div class="feature-card">
             <div class="feature-icon"></div>
             <div class="feature-title">Adjustable angle</div>
             <div class="feature-text">
-              Tilt the mirror to your perfect angle. No more bending to reach the right view.
+              Tilt it exactly how you like. No more bending over the sink to see your face properly.
             </div>
           </div>
           <div class="feature-card">
             <div class="feature-icon"></div>
             <div class="feature-title">Ultra-clear glass</div>
             <div class="feature-text">
-              Clean, sharp reflection so you can see details when doing eyeliner, contour or beard lines.
+              Sharp reflection so you can do eyeliner, lip liner and small details easily.
             </div>
           </div>
           <div class="feature-card">
             <div class="feature-icon"></div>
-            <div class="feature-title">Minimal, aesthetic design</div>
+            <div class="feature-title">Aesthetic design</div>
             <div class="feature-text">
-              Looks good on your desk or vanity. Available in soft pink or white to match your setup.
+              Minimal, soft and clean. Looks cute in photos and matches pink / white desk setups.
             </div>
           </div>
         </div>
       </section>
 
-      <!-- DETAILS / SPEC -->
+      <!-- DETAILS -->
       <section id="details">
         <div class="section-eyebrow">Product details</div>
         <div class="section-title">What you get with GlowMirror</div>
         <p class="section-subtitle">
-          One product, everything you need. No confusing options or bundles – just choose your color and order on WhatsApp.
+          One simple product. Choose your color, send your location on WhatsApp, and you’re done.
         </p>
 
         <div class="details-layout">
-
           <div>
             <div class="details-list">
               <div class="details-item">
@@ -823,7 +809,7 @@
               </div>
               <div class="details-item">
                 <div class="details-label">Use time</div>
-                <div class="details-value">Up to 8–10 hours per charge</div>
+                <div class="details-value">Up to 8–10 hours per charge (on low–medium)</div>
               </div>
               <div class="details-item">
                 <div class="details-label">Colors</div>
@@ -831,26 +817,26 @@
               </div>
               <div class="details-item">
                 <div class="details-label">Size</div>
-                <div class="details-value">Compact and portable</div>
+                <div class="details-value">Compact desk / vanity size · easy to move</div>
               </div>
               <div class="details-item">
                 <div class="details-label">Placement</div>
-                <div class="details-value">Non-slip base</div>
+                <div class="details-value">Non-slip base · stable on flat surfaces</div>
               </div>
             </div>
           </div>
 
           <div>
             <div class="whats-included-card">
-              <div class="badge-small">Included</div>
+              <div class="badge-small">Included in the box</div>
               <ul class="whats-included-list">
                 <li>1× GlowMirror LED vanity mirror</li>
                 <li>1× USB-C charging cable</li>
                 <li>Quick start guide</li>
-                <li>7-day functional warranty*</li>
+                <li>Basic 7-day functional warranty*</li>
               </ul>
               <p style="margin-top: 8px; font-size: 0.78rem; color: var(--muted);">
-                *Warranty covers lighting or power issues.
+                *Covers lighting or power issues on arrival (not drops, scratches or physical damage).
               </p>
               <div style="margin-top: 10px;">
                 <a
@@ -865,7 +851,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -874,55 +859,52 @@
         <div class="section-eyebrow">FAQ</div>
         <div class="section-title">Questions before you order?</div>
         <p class="section-subtitle">
-          Here are the most common questions customers ask.
+          You can always ask more directly on WhatsApp, but here are the basics.
         </p>
 
         <div class="faq-grid">
-
           <div class="faq-item">
             <div class="faq-q">How do I order?</div>
             <div class="faq-a">
-              Tap the WhatsApp button and send your color + location.
+              Tap any “Order on WhatsApp” button, send your color (pink or white), quantity and your location.
             </div>
           </div>
-
           <div class="faq-item">
             <div class="faq-q">Do you offer cash on delivery?</div>
-            <div class="faq-a">Yes, COD is available in Lebanon.</div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-q">How long does delivery take?</div>
-            <div class="faq-a">1–3 days depending on your area.</div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-q">Is the mirror too bright?</div>
             <div class="faq-a">
-              No, it has 3 levels so you can choose your comfort.
+              Yes, COD is available inside Lebanon in most areas. Delivery fees depend on your location.
             </div>
           </div>
-
+          <div class="faq-item">
+            <div class="faq-q">Is the light too strong at night?</div>
+            <div class="faq-a">
+              No. You can choose between 3 levels. On the lowest brightness, it’s soft and comfortable for late-night routines.
+            </div>
+          </div>
           <div class="faq-item">
             <div class="faq-q">Can I travel with it?</div>
             <div class="faq-a">
-              Yes, it’s compact and folds easily.
+              Yes, it’s light and compact. Just recharge it with any USB-C cable and use it wire-free.
             </div>
           </div>
-
           <div class="faq-item">
-            <div class="faq-q">What if it arrives damaged?</div>
+            <div class="faq-q">What if it arrives with a problem?</div>
             <div class="faq-a">
-              You can request support within 7 days.
+              If there’s any lighting or power issue when you receive it, contact us within 7 days with a video and we’ll help you.
             </div>
           </div>
-
+          <div class="faq-item">
+            <div class="faq-q">Is stock limited?</div>
+            <div class="faq-a">
+              Yes, we bring limited batches. If it’s still in stock, you’ll get confirmation on WhatsApp.
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
     <footer>
-      <div>© 2025 GlowMirror</div>
+      <div>© 2025 GlowMirror. All rights reserved.</div>
       <div class="footer-links">
         <a href="#top">Back to top ↑</a>
       </div>
@@ -939,6 +921,5 @@
       });
     }
   </script>
-
 </body>
 </html>
